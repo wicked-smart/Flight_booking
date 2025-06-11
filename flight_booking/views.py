@@ -3,5 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def index(request):
-    return HttpResponse("Welcome to the django world !!!")
+def index(request, name):
+    return render(request, 'flight_booking/index.html', {
+        "name": name
+    })
